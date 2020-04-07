@@ -23,6 +23,8 @@
 
       <div class="content" id="character">
       </div>
+
+      <button type="submit" id="submit">Get a new quote!</button>
     </div>
 
   </section>
@@ -30,7 +32,7 @@
   <!-- We need to load axios first! -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
     integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous">
-  </script>
+    </script>
   <script>
     function fetchQuotesJSON() {
 
@@ -54,6 +56,9 @@
     }
 
     fetchQuotesJSON();
+
+    const button = document.getElementById('submit');
+    button.addEventListener('click', fetchQuotesJSON);
   </script>
 </body>
 
